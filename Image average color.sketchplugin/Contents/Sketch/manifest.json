@@ -1,0 +1,41 @@
+{
+  "author" : "Antonio J Martinez",
+  "identifier" : "com.antoniojmartinez.sketch.imageAverageColor",
+  "version" : "1.0",
+  "description" : "Plugin to save an image average color and fill layers from it",
+  "authorEmail" : "martinez.sanchez.aj@icloud.com",
+  "name" : "Image average color",
+  "homepage" : "https://github.com/AntonioJMartinez/sketch-imageAverageColor",
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands" : [
+    {
+      "script" : "saveImageAverageColorAsDocumentColor.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "ctrl shift d",
+      "name" : "Save average color as document color",
+      "identifier" : "saveImageAverageColorAsDocumentColor"
+    },
+    {
+      "script" : "saveImageAverageColorAsGlobalColor.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "ctrl shift g",
+      "name" : "Save average color as global color",
+      "identifier" : "saveImageAverageColorAsGlobalColor"
+    },
+    {
+      "script" : "fillFromAverageColor.cocoascript",
+      "handler" : "onRun",
+      "name" : "Fill layer from image average color",
+      "identifier" : "fillFromAverageColor",
+      "shortcut": "ctrl shift f",
+    },
+  ],
+  "menu" : {
+    "items" : [
+      "saveImageAverageColorAsDocumentColor",
+      "saveImageAverageColorAsGlobalColor",
+      "fillFromAverageColor"
+    ]
+  }
+}

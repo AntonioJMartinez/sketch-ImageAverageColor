@@ -1,0 +1,6 @@
+@import 'color.js'
+
+var onRun = function(context) {
+  
+  color.fillAverageColor(context);  
+};

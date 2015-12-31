@@ -1,0 +1,7 @@
+@import 'color.js'
+
+var onRun = function(context) {
+
+  color.saveImageAverageColorAsDocumentColor(context);
+
+};
