@@ -6,6 +6,9 @@ It allows you to get the average color of an image to save it or use it to fill 
 
 ## How to install it
 
+### Use Sketch Toolbox (recommended)
+Use [Sketch Toolbox](http://sketchtoolbox.com/) to search for `Image average color` and click install. Simple as that.
+
 ### Install manually 
 
 1. Download the zip from GitHub 
