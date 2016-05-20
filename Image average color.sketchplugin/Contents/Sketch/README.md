@@ -25,6 +25,7 @@ It allows you to get the average color of an image to save it or use it to fill 
 * `ctrl shift g` to save the image average color as global color
 * `ctrl shift d` to save the image average color as document color
 * `ctrl shift f` to fill a layer from the image average color
+* `ctrl shift t` to copy to image average color to clipboard
 
 ## License
 Sketch Image Average Color is released under the MIT license.

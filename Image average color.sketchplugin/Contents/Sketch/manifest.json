@@ -30,12 +30,20 @@
       "identifier" : "fillFromAverageColor",
       "shortcut": "ctrl shift f",
     },
+    {
+      "script" : "copyToClipboard.cocoascript",
+      "handler" : "onRun",
+      "name" : "Copy color to clipboard",
+      "identifier" : "copyToClipboard",
+      "shortcut": "ctrl shift t",
+    },
   ],
   "menu" : {
     "items" : [
       "saveImageAverageColorAsDocumentColor",
       "saveImageAverageColorAsGlobalColor",
-      "fillFromAverageColor"
+      "fillFromAverageColor",
+      "copyToClipboard",
     ]
   }
 }

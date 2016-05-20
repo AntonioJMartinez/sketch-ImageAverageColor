@@ -1,0 +1,21 @@
+@import 'color.js'
+
+var onRun = function(context) {
+
+  	var averageColor = color.calculateAverageColorFromImage(context);
+
+  	var doc = context.document;
+
+  	if (averageColor != null) {
+      var averageColorString = averageColor.hexValue().toString();
+
+      var pasteBoard = NSPasteboard.generalPasteboard();
+		  [pasteBoard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil]
+    	[pasteBoard setString:averageColorString forType:NSPasteboardTypeString]
+
+    	 doc.showMessage("Successfully copied image average color " + averageColorString + " to clipboard");
+    } else {
+        doc.showMessage("Couldn't get the average color. Please, check you are selecting an image.");
+    }
+
+};
