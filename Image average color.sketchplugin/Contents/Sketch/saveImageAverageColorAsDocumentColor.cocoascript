@@ -1,7 +1,10 @@
 @import 'color.js'
+@import 'helpers/settings.js'
 
 var onRun = function(context) {
 
-  color.saveImageAverageColorAsDocumentColor(context);
-
+    var averageColor = color.calculateAverageColorFromImage(context);
+    if (averageColor != null) {
+    	settings.saveDocumentColor(context, averageColor);
+    }
 };

@@ -3,18 +3,6 @@
 
 var color = {
 
-    saveImageAverageColorAsGlobalColor: function(context) {
-        
-        var averageColor = color.calculateAverageColorFromImage(context);
-        settings.saveGlobalColor(context, averageColor);
-    },
-
-    saveImageAverageColorAsDocumentColor: function(context) {
-
-        var averageColor = color.calculateAverageColorFromImage(context);
-        settings.saveDocumentColor(context, averageColor);
-    },
-
     calculateAverageColorFromImage: function(context) {
 
         var doc = context.document;
@@ -26,11 +14,10 @@ var color = {
         } 
         
         var layer = selectedLayers[0];
-        
+
         if (![layer isKindOfClass:[MSLayer class]] || ![layer isKindOfClass:[MSBitmapLayer class]] ) {
-        
             settings.alert('The selected layer is not a bitmap image. Please, select an image and try again','Select an image');
-             return;
+            return;
         } 
 
         var image = layer.NSImage();
@@ -79,7 +66,6 @@ var color = {
         };
                       
         if ( ![layerSelected isKindOfClass:[MSLayer class]] || [layerSelected isKindOfClass:[MSBitmapLayer class]] || [layerSelected isKindOfClass:[MSPage class]]) {
-        
             settings.alert('Selected layer is not an editable layer. Please, select an editable layer and try again','Select a layer');
             return;
         };
@@ -90,15 +76,23 @@ var color = {
         };
 
         var callback = settings.getSelectedItemFromSelect('Choose the image where you want to get the average color from',layersNames, 1)
+
         var responseCode = callback[0];
-        var imageToGetAverageColorNameIndex = callback[1];
-        
         if (responseCode != 1000) {
             settings.alert('An unexpected error has occurred. Please, select an image and try again.')
             return;
         };
 
-        var imageToGetAverageColor = allLayers[imageToGetAverageColorNameIndex].NSImage();
+        var imageToGetAverageColorNameIndex = callback[1];
+
+        var selectedImageLayer =  allLayers[imageToGetAverageColorNameIndex];
+
+        if (![selectedImageLayer isKindOfClass:[MSLayer class]] || ![selectedImageLayer isKindOfClass:[MSBitmapLayer class]] ) {
+            settings.alert('Selected layer is not an editable layer. Please, select an editable layer and try again','Select a layer');
+            return;
+        }
+
+        var imageToGetAverageColor = selectedImageLayer.NSImage();
 
         var averageColor = color.averageColorFromImage(imageToGetAverageColor);
 

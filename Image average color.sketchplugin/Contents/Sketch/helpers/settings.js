@@ -35,13 +35,21 @@ var settings = {
     saveGlobalColor: function(context, color) {
 
         var app = [NSApplication sharedApplication];
+        var doc = context.document;
+
         var appController = app.delegate();
- 
+    
         var globalColors =  appController.globalAssets().colors();
 
         globalColors.addObject(color);
         appController.globalAssets().setPrimitiveColors(globalColors);
         appController.globalAssets().objectDidChange;
+
+        if (globalColors.containsObject(color)) {
+            doc.showMessage("Color saved as global color successfully");
+        } else {
+            doc.showMessage("An error saving the color ocurred. Please, try again later");
+        }
     },
 
     saveDocumentColor: function(context, color) {
@@ -52,5 +60,11 @@ var settings = {
         documentColors.addObject(color);
 
         doc.documentData().assets().setPrimitiveColors(documentColors); 
+
+         if (documentColors.containsObject(color)) {
+            doc.showMessage("Color saved as document color successfully");
+        } else {
+            doc.showMessage("An error saving the color ocurred. Please, try again later");
+        }
     }
 };
