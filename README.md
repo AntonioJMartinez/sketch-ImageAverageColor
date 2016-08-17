@@ -4,6 +4,8 @@ A [Sketch](http://bohemiancoding.com/sketch/) plugin to save and use the average
 
 It allows you to get the average color of an image to save it or use it to fill any layer.
 
+![Example](https://github.com/AntonioJMartinez/sketch-ImageAverageColor/raw/master/resources/imageAverageColor.gif)
+
 ## How to install it
 
 ### Use Sketch Toolbox (recommended)
