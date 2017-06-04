@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Image Average Color </title>
+    <link>https://raw.githubusercontent.com/AntonioJMartinez/sketch-imageAverageColor/master/appcast.xml</link>
+    <description>A Sketch plugin to save an image average color and fill layers from it</description>
+    <language>en</language>
+      <item>
+        <title>Version 1.0</title>
+        <description>
+          <![CDATA[
+            <ul>
+              <li>v1.0</li>
+            </ul>
+          ]]>
+        </description>
+        <pubDate>Wed, 17 Aug 2016 13:46:00 +0000</pubDate>
+        <enclosure url="https://github.com/AntonioJMartinez/sketch-ImageAverageColor/archive/v1.0.zip" sparkle:version="1.0" length="107758" type="application/octet-stream" />
+      </item>
+      <item>
+        <title>Version 1.1</title>
+        <description>
+          <![CDATA[
+            <ul>
+            <li>Add support for Sketch 45 (Auto-update enabled)</li>
+            </ul>
+          ]]>
+        </description>
+        <pubDate>Sun, 04 Jun 2017 11:30:00 +0000</pubDate>
+        <enclosure url="https://github.com/AntonioJMartinez/sketch-ImageAverageColor/archive/v1.1.zip" sparkle:version="1.1" length="107821" type="application/octet-stream" />
+      </item>
+  </channel>
+</rss>
