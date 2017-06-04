@@ -1,13 +1,14 @@
 {
   "author" : "Antonio J Martinez",
   "identifier" : "com.antoniojmartinez.sketch.imageAverageColor",
-  "version" : "1.0",
-  "description" : "Plugin to save an image average color and fill layers from it",
+  "version" : "1.1",
+  "description" : "A Sketch plugin to save an image average color and fill layers from it",
   "authorEmail" : "martinez.sanchez.aj@icloud.com",
   "name" : "Image average color",
   "homepage" : "https://github.com/AntonioJMartinez/sketch-imageAverageColor",
   "compatibleVersion": 3,
   "bundleVersion": 1,
+  "appcast": "https://raw.githubusercontent.com/AntonioJMartinez/sketch-imageAverageColor/master/appcast.xml",
   "commands" : [
     {
       "script" : "saveImageAverageColorAsDocumentColor.cocoascript",
