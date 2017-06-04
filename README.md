@@ -39,5 +39,5 @@ Sketch Image Average Color is released under the MIT license.
 
 ## Author
 
-Made by Antonio J. Martinez. @AntonioJMS
+Made by Antonio J. Martinez. [@AntonioJMS](https://twitter.com/AntonioJMS)
 
