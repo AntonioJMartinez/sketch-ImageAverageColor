@@ -29,22 +29,22 @@
       "handler" : "onRun",
       "name" : "Fill layer from image average color",
       "identifier" : "fillFromAverageColor",
-      "shortcut": "ctrl shift f",
+      "shortcut": "ctrl shift f"
     },
     {
       "script" : "copyToClipboard.cocoascript",
       "handler" : "onRun",
       "name" : "Copy color to clipboard",
       "identifier" : "copyToClipboard",
-      "shortcut": "ctrl shift t",
-    },
+      "shortcut": "ctrl shift t"
+    }
   ],
   "menu" : {
     "items" : [
       "saveImageAverageColorAsDocumentColor",
       "saveImageAverageColorAsGlobalColor",
       "fillFromAverageColor",
-      "copyToClipboard",
+      "copyToClipboard"
     ]
   }
 }
