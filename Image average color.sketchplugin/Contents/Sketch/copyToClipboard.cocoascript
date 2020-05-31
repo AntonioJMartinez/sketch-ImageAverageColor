@@ -2,18 +2,19 @@
 
 var onRun = function(context) {
 
-  	var averageColor = color.calculateAverageColorFromImage(context);
+    var averageColor = color.calculateAverageColorFromImage(context);
 
-  	var doc = context.document;
+    var doc = context.document;
 
-  	if (averageColor != null) {
-      var averageColorString = averageColor.hexValue().toString();
+    if (averageColor != null) {
+        var averageImmutableColor = [MSImmutableColor colorWithRed:averageColor.red() green:averageColor.green() blue:averageColor.blue() alpha:averageColor.alpha()];
+        var averageColorString = averageImmutableColor.hexValue().toString();
 
-      var pasteBoard = NSPasteboard.generalPasteboard();
-		  [pasteBoard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil]
-    	[pasteBoard setString:averageColorString forType:NSPasteboardTypeString]
+        var pasteBoard = NSPasteboard.generalPasteboard();
+        [pasteBoard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil];
+        [pasteBoard setString:averageColorString forType:NSPasteboardTypeString];
 
-    	 doc.showMessage("Successfully copied image average color " + averageColorString + " to clipboard");
+        doc.showMessage("Successfully copied image average color " + averageColorString + " to clipboard");
     } else {
         doc.showMessage("Couldn't get the average color. Please, check you are selecting an image.");
     }
